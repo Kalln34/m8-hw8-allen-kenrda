@@ -39,14 +39,34 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  transition: 300ms;
+}
+
+header a:hover {
+  transform: translateY(-3px);
 }
 /* end header link animations */
+
+
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  box-shadow: inset 0 0 0 0 #06b3bc;
+  color:#06b3bc;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .10s ease-in-out, box-shadow .10s ease-in-out;
 }
+
+main a:hover {
+  box-shadow: inset 100px 0 0 0 #06b3bc;
+  color: white;
+}
+
 /* end article link transitions */
+
+
 
 main > article, nav{
   max-width: 1200px;
@@ -100,6 +120,13 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  animation: hover 1s infinite alternate linear;
+}
+
+@keyframes hover {
+  to {
+    transform: translateY(-7px)
+  }
 }
 
 main article {
